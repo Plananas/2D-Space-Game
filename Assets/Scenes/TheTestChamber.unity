@@ -10632,7 +10632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420029}
   - component: {fileID: 519420034}
   m_Layer: 0
@@ -10709,19 +10708,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d0ef2e5635003343b0c8b4f70957189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1484444624}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14518,8 +14504,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.061773255, y: 0.005797672}
-  m_Size: {x: 0.87645334, y: 0.9884045}
+  m_Offset: {x: -0.061773263, y: 0.0062765284}
+  m_Size: {x: 0.87645334, y: 0.98744696}
   m_Direction: 0
 --- !u!70 &1484444631
 CapsuleCollider2D:
@@ -14534,9 +14520,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07246194, y: -0.3083448}
-  m_Size: {x: 0.45541316, y: 0.3833156}
-  m_Direction: 1
+  m_Offset: {x: -0.072462045, y: 0.00058603287}
+  m_Size: {x: 0.7001042, y: 1.0012007}
+  m_Direction: 0
 --- !u!95 &1484444632
 Animator:
   serializedVersion: 5
