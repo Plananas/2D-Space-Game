@@ -11,25 +11,35 @@ public class CheckLight : MonoBehaviour
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
 
     }
+    public static float GetAngleFromVectorFloat(Vector3 dir){
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if(n < 0) n += 360;
+
+        return n;
+    }
 
     [SerializeField] private LayerMask layerMask;
-    private Mesh mesh;
-    //public GameObject startingpoint;
-    private Vector3 origin;
-
-
+    private Mesh        mesh;
+    public Vector3      origin;
+    public Transform    torchposition;
+    public float        startingAngle;
+    public float        fov = 20f;
+    public float        viewDistance = 50f;
+    
     void Start(){
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        
     }
     private void LateUpdate(){
-
-        float fov = 20f;
+        
+        
         int rayCount = 50;
-        //origin = Vector3.zero;
-        float angle = 0f;
+        origin = torchposition.position;
+        float angle = startingAngle;
         float angleIncrease = fov/ rayCount;
-        float viewDistance = 50f;
+
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -43,11 +53,11 @@ public class CheckLight : MonoBehaviour
             Vector3 vertex;
 
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            Debug.Log(origin);
+            //Debug.Log(origin);
             if (raycastHit2D.collider == null){
                 //No hit
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance; 
-                Debug.Log("No Hit");
+                //Debug.Log("No Hit");
                 //Debug.Log(vertex);
             } 
             else{
@@ -84,7 +94,7 @@ public class CheckLight : MonoBehaviour
 
     }
     public void SetAimDirection(Vector3 aimDirection){
-
+        startingAngle = GetAngleFromVectorFloat(aimDirection) - fov /2f;
     } 
     
 }
