@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float health;
+    public float sanity;
+    public float ammo;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+
+     
 }
