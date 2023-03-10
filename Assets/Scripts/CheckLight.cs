@@ -39,7 +39,7 @@ public class CheckLight : MonoBehaviour
         origin = torchposition.position;
         float angle = startingAngle;
         float angleIncrease = fov/ rayCount;
-
+        mesh.RecalculateBounds();
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
