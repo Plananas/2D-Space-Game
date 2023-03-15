@@ -37,7 +37,7 @@ public class CheckLight : MonoBehaviour
         int rayCount = 50;
         origin = torchposition.position;
         //float angle = startingAngle;
-        Debug.Log(torchposition.rotation.Z)
+        //Debug.Log(torchposition.rotation.Z);
         float angle = torchposition.rotation.z;
         float angleIncrease = fov/ rayCount;
         mesh.RecalculateBounds();
