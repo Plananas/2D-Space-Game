@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour {
 
-    public AudioMixer audioMixer;
 
     public Dropdown resolutionDropdown;
 
@@ -36,6 +34,8 @@ public class SettingsMenu : MonoBehaviour {
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+      
     }
 
     public void SetResolution (int resolutionIndex)
@@ -44,14 +44,10 @@ public class SettingsMenu : MonoBehaviour {
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); 
     }
 
-    public void SetVolume (float volume)
-    {
-        audioMixer.SetFloat("volume", volume);
-
-    }
-
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }
+
+
 }
