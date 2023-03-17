@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Reticle
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -44,9 +46,15 @@ TagManager:
   - name: Background
     uniqueID: 3860584055
     locked: 0
+  - name: Items
+    uniqueID: 1136506419
+    locked: 0
   - name: Foreground
     uniqueID: 576424901
     locked: 0
   - name: Player
     uniqueID: 4202288417
+    locked: 0
+  - name: Retical
+    uniqueID: 3727218287
     locked: 0
