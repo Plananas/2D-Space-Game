@@ -5,7 +5,6 @@ using System;
 
 public class CheckLight : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static Vector3 GetVectorFromAngle(float angle){
         float angleRad = angle * (Mathf.PI/180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -18,7 +17,7 @@ public class CheckLight : MonoBehaviour
 
         return n;
     }
-
+    
     [SerializeField] private LayerMask layerMask;
     private Mesh        mesh;
     public Vector3      origin;
@@ -34,12 +33,14 @@ public class CheckLight : MonoBehaviour
     }
     private void LateUpdate(){
         
-        
+
         int rayCount = 50;
         origin = torchposition.position;
-        float angle = startingAngle;
+        //float angle = startingAngle;
+        //Debug.Log(torchposition.rotation.Z);
+        float angle = torchposition.rotation.z;
         float angleIncrease = fov/ rayCount;
-
+        mesh.RecalculateBounds();
 
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
