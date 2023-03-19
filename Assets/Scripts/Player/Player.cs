@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public Animator PlayerAnimator;
+    public GameObject torch;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,7 +29,9 @@ public class Player : MonoBehaviour
         {
             TakeDamage(2);
         }
-       
+        if(currentHealth <= 0){
+            Death();
+        }
     }
 
     void TakeDamage(int damage)
@@ -35,7 +40,10 @@ public class Player : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
     }
-       
+    
+    void Death(){
+        
+    }
  
     
 
