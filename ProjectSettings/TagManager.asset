@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Reticle
   - Door
+  - Torch
   layers:
   - Default
   - TransparentFX

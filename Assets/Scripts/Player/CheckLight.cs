@@ -17,7 +17,7 @@ public class CheckLight : MonoBehaviour
 
         return n;
     }
-    
+    //Public variables so we can test in runtime
     [SerializeField] private LayerMask layerMask;
     private Mesh        mesh;
     public Vector3      origin;
@@ -44,7 +44,7 @@ public class CheckLight : MonoBehaviour
 
         float angleIncrease = fov/ rayCount;
         mesh.RecalculateBounds();
-
+        
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
         int[] triangles = new int[rayCount * 3];

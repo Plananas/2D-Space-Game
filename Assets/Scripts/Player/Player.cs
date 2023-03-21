@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
 
     public Animator PlayerAnimator;
     public GameObject torch;
-
+    public GameObject torchmesh;
+    private bool torchActive = true;
     void Start()
     {
         currentHealth = maxHealth;
@@ -31,6 +32,20 @@ public class Player : MonoBehaviour
         }
         if(currentHealth <= 0){
             Death();
+        }
+        //When player presses T, toggle torch.
+        if (Input.GetKeyDown(KeyCode.T)){
+            if(torchActive){
+                torch.SetActive(false);
+                torchmesh.SetActive(false);
+                torchActive = false;
+            }
+            else{
+                torch.SetActive(true);
+                torchmesh.SetActive(true);
+                torchActive = true;
+            }
+
         }
     }
 

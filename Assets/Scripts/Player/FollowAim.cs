@@ -23,7 +23,7 @@ public class FollowAim : MonoBehaviour
         difference.Normalize();
  
         rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        Debug.Log(rotationZ);
+        //Debug.Log(rotationZ);
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         
         //This will flip the player sprite depending on the direction they face.
