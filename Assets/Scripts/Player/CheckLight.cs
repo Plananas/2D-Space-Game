@@ -25,6 +25,7 @@ public class CheckLight : MonoBehaviour
     public float        startingAngle;
     public float        fov = 20f;
     public float        viewDistance = 50f;
+    public FollowAim    playerAim;
     
     void Start(){
         mesh = new Mesh();
@@ -37,8 +38,10 @@ public class CheckLight : MonoBehaviour
         int rayCount = 50;
         origin = torchposition.position;
         //float angle = startingAngle;
-        //Debug.Log(torchposition.rotation.Z);
-        float angle = torchposition.rotation.z;
+        //Debug.Log(torchposition.localEulerAngles.z);
+
+        float angle = playerAim.rotationZ + 10;
+
         float angleIncrease = fov/ rayCount;
         mesh.RecalculateBounds();
 
@@ -54,7 +57,6 @@ public class CheckLight : MonoBehaviour
             Vector3 vertex;
 
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            //Debug.Log(origin);
             if (raycastHit2D.collider == null){
                 //No hit
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance; 
