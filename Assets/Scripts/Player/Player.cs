@@ -5,13 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float health;
+    public float stamina;
     public float sanity;
     public float ammo;
 
     public int maxHealth = 20;
     public int currentHealth;
+    public int maxStamina = 20;
+    public int currentStamina; 
 
     public HealthBar healthBar;
+    public StaminaBar staminaBar;
 
     public Animator PlayerAnimator;
     public GameObject torch;
@@ -21,6 +25,9 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        currentStamina = maxStamina;
+        staminaBar.SetMaxStamina(maxStamina);
     }
 
 
@@ -47,6 +54,10 @@ public class Player : MonoBehaviour
             }
 
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            UseStamina(2);
+        }
     }
 
     void TakeDamage(int damage)
@@ -60,6 +71,12 @@ public class Player : MonoBehaviour
         
     }
  
+    void UseStamina(int UseStamina)
+    {
+        currentStamina -= UseStamina;
+
+        staminaBar.SetStamina(currentStamina);
+    }
     
 
 
