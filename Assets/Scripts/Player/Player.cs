@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public Animator PlayerAnimator;
     public GameObject torch;
     public GameObject torchmesh;
+
     private bool torchActive = true;
     void Start()
     {
@@ -46,11 +47,13 @@ public class Player : MonoBehaviour
                 torch.SetActive(false);
                 torchmesh.SetActive(false);
                 torchActive = false;
+
             }
             else{
                 torch.SetActive(true);
                 torchmesh.SetActive(true);
                 torchActive = true;
+
             }
 
         }
