@@ -19,6 +19,7 @@ public class CheckLight : MonoBehaviour
     }
     //Public variables so we can test in runtime
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask enemyLayerMask;
     private Mesh        mesh;
     public Vector3      origin;
     public Transform    torchposition;
@@ -27,12 +28,14 @@ public class CheckLight : MonoBehaviour
     public float        viewDistance = 50f;
     public FollowAim    playerAim;
     
+    //private bool        HittingEnemy = false;
+
     void Start(){
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         
     }
-    private void LateUpdate(){
+    private void Update(){
         
 
         int rayCount = 50;
@@ -56,19 +59,31 @@ public class CheckLight : MonoBehaviour
         for(int i = 0; i <= rayCount; i++){
             Vector3 vertex;
 
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D   = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+
+            RaycastHit2D HitEnemy       = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, enemyLayerMask);
+            //If the ray doesnt hit a wall it will be at maximum length
             if (raycastHit2D.collider == null){
                 //No hit
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance; 
                 //Debug.Log("No Hit");
                 //Debug.Log(vertex);
             } 
+            //if not then limit the length to the point it hit.
             else{
                 //Hit
                 
                 vertex = raycastHit2D.point;
                 //Debug.Log(vertex);
             }
+
+            //Check if we have hit an enemy with the light.
+            if(HitEnemy.collider != null){
+                GameObject speech = HitEnemy.collider.gameObject.transform.GetChild(0).gameObject;
+                speech.SetActive(true);
+                //Debug.Log(HitEnemy.collider.name);
+            }
+
 
             vertices[vertexIndex] = vertex;
             if(i>0){
