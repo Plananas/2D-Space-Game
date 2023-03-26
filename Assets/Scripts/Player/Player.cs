@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float health;
-    public float sanity;
-    public float ammo;
+    public  int         health          = 20;
+    public  int         sanity;
+    public  int         ammo;
 
-    public int maxHealth = 20;
-    public int currentHealth;
 
-    public HealthBar healthBar;
+    public  HealthBar   healthBar;
 
-    public Animator PlayerAnimator;
-    public GameObject torch;
-    public GameObject torchmesh;
-    private bool torchActive = true;
+    public  Animator    PlayerAnimator;
+    public  GameObject  torch;
+    public  GameObject  torchmesh;
+    public  bool        torchActive     = true;
+
+
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(health);
     }
 
 
@@ -30,7 +29,7 @@ public class Player : MonoBehaviour
         {
             TakeDamage(2);
         }
-        if(currentHealth <= 0){
+        if(health <= 0){
             Death();
         }
         //When player presses T, toggle torch.
@@ -51,9 +50,9 @@ public class Player : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        health -= damage;
 
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(health);
     }
     
     void Death(){

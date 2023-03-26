@@ -20,13 +20,14 @@ public class CheckLight : MonoBehaviour
     //Public variables so we can test in runtime
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private LayerMask enemyLayerMask;
-    private Mesh        mesh;
-    public Vector3      origin;
-    public Transform    torchposition;
-    public float        startingAngle;
-    public float        fov = 20f;
-    public float        viewDistance = 50f;
-    public FollowAim    playerAim;
+
+    private     Mesh            mesh;
+    public      Vector3         origin;
+    public      Transform       torchposition;
+    public      float           startingAngle;
+    public      float           fov = 20f;
+    public      float           viewDistance = 50f;
+    public      FollowAim       playerAim;
     
     //private bool        HittingEnemy = false;
 
@@ -38,24 +39,23 @@ public class CheckLight : MonoBehaviour
     private void Update(){
         
 
-        int rayCount = 50;
-        origin = torchposition.position;
-        //float angle = startingAngle;
-        //Debug.Log(torchposition.localEulerAngles.z);
-
-        float angle = playerAim.rotationZ + 10;
-
+        int rayCount        = 50;
+        origin              = torchposition.position;
+        float angle         = playerAim.rotationZ + 10;
         float angleIncrease = fov/ rayCount;
+
+
         mesh.RecalculateBounds();
         
-        Vector3[] vertices = new Vector3[rayCount + 1 + 1];
-        Vector2[] uv = new Vector2[vertices.Length];
-        int[] triangles = new int[rayCount * 3];
+        Vector3[] vertices  = new Vector3[rayCount + 1 + 1];
+        Vector2[] uv        = new Vector2[vertices.Length];
+        int[] triangles     = new int[rayCount * 3];
 
-        vertices[0] = origin;
+        vertices[0]         = origin;
 
-        int vertexIndex = 1;
-        int triangleIndex = 0;
+        int vertexIndex     = 1;
+        int triangleIndex   = 0;
+
         for(int i = 0; i <= rayCount; i++){
             Vector3 vertex;
 
@@ -79,9 +79,10 @@ public class CheckLight : MonoBehaviour
 
             //Check if we have hit an enemy with the light.
             if(HitEnemy.collider != null){
-                GameObject speech = HitEnemy.collider.gameObject.transform.GetChild(0).gameObject;
-                speech.SetActive(true);
-                //Debug.Log(HitEnemy.collider.name);
+                //Should trigger the enemy trigger script.
+                EnemyScript trigger = HitEnemy.collider.gameObject.GetComponent<EnemyScript>();
+                trigger.EnemyTrigger();
+
             }
 
 
