@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Torch
   - Enemy
+  - Ladder
+  - Platform
   layers:
   - Default
   - TransparentFX
