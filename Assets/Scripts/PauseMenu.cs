@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     private bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject reticle;
+
     // Update is called once per frame
     void Update()
     {
@@ -14,11 +14,11 @@ public class PauseMenu : MonoBehaviour
      {
         if(GameIsPaused){
             Resume();
-            reticle.SetActive(true);
+
         }
         else{
             Pause();
-            reticle.SetActive(true);
+
         }
 
      }   

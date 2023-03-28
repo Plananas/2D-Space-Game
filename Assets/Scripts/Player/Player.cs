@@ -4,41 +4,36 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float health;
-    public float stamina;
-    public float sanity;
-    public float ammo;
+    public  int          health;
+    public  int          stamina;
+    public  float        sanity;
+    public  float        ammo;
 
-    public int maxHealth = 20;
-    public int currentHealth;
-    public int maxStamina = 20;
-    public int currentStamina; 
 
-    public HealthBar healthBar;
-    public StaminaBar staminaBar;
+    public  HealthBar    healthBar;
+    public  StaminaBar   staminaBar;
 
-    public Animator PlayerAnimator;
-    public GameObject torch;
-    public GameObject torchmesh;
+    public  Animator     PlayerAnimator;
+    public  GameObject   torch;
+    public  GameObject   torchmesh;
 
-    private bool torchActive = true;
+    private bool         torchActive = true;
+
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
 
-        currentStamina = maxStamina;
-        staminaBar.SetMaxStamina(maxStamina);
+        healthBar.SetMaxHealth(health);
+        staminaBar.SetMaxStamina(stamina);
     }
-
 
     void Update()
     {
+        //This will neeed to change to trigger if an enemy makes contact with us//
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(2);
         }
-        if(currentHealth <= 0){
+        if(health <= 0){
             Death();
         }
         //When player presses T, toggle torch.
@@ -55,8 +50,10 @@ public class Player : MonoBehaviour
                 torchActive = true;
 
             }
-
         }
+
+        //We will do this when running//
+        //running not implemented just yet//
         if (Input.GetKeyDown(KeyCode.M))
         {
             UseStamina(2);
@@ -65,20 +62,20 @@ public class Player : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-
-        healthBar.SetHealth(currentHealth);
+        health -= damage;
+        healthBar.SetHealth(health);
     }
-    
+
+    //This will play the death animation//
     void Death(){
         
     }
  
     void UseStamina(int UseStamina)
     {
-        currentStamina -= UseStamina;
+        stamina -= UseStamina;
 
-        staminaBar.SetStamina(currentStamina);
+        staminaBar.SetStamina(stamina);
     }
     
 
