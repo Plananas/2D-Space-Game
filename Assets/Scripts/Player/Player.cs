@@ -17,13 +17,13 @@ public class Player : MonoBehaviour
     public  GameObject   torch;
     public  GameObject   torchmesh;
 
-    private bool         torchActive = true;
+    public  bool         torchActive = true;
 
     void Start()
     {
 
-        healthBar.SetMaxHealth(health);
-        staminaBar.SetMaxStamina(stamina);
+        healthBar.SetHealth(health);
+        staminaBar.SetStamina(stamina);
     }
 
     void Update()
