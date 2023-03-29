@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
+
         //This will neeed to change to trigger if an enemy makes contact with us//
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -42,7 +45,7 @@ public class Player : MonoBehaviour
                 torch.SetActive(false);
                 torchmesh.SetActive(false);
                 torchActive = false;
-
+                
             }
             else{
                 torch.SetActive(true);
@@ -57,6 +60,12 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             UseStamina(2);
+        }
+
+        //Decreases the sanity when the torch is not on//
+        if(!torchActive){
+            sanity -= 0.5f * Time.deltaTime;
+
         }
     }
 
@@ -77,8 +86,6 @@ public class Player : MonoBehaviour
 
         staminaBar.SetStamina(stamina);
     }
-    
-
 
      
 }
