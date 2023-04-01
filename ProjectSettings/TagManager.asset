@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Reticle
   - Door
+  - Torch
+  - Enemy
+  - Ladder
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 

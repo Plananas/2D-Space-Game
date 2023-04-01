@@ -17,56 +17,74 @@ public class CheckLight : MonoBehaviour
 
         return n;
     }
-    
+    //Public variables so we can test in runtime
     [SerializeField] private LayerMask layerMask;
-    private Mesh        mesh;
-    public Vector3      origin;
-    public Transform    torchposition;
-    public float        startingAngle;
-    public float        fov = 20f;
-    public float        viewDistance = 50f;
+    [SerializeField] private LayerMask enemyLayerMask;
+
+    private     Mesh            mesh;
+    public      Vector3         origin;
+    public      Transform       torchposition;
+    public      float           startingAngle;
+    public      float           fov = 20f;
+    public      float           viewDistance = 50f;
+    public      FollowAim       playerAim;
     
+    //private bool        HittingEnemy = false;
+
     void Start(){
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         
     }
-    private void LateUpdate(){
+    private void Update(){
         
 
-        int rayCount = 50;
-        origin = torchposition.position;
-        //float angle = startingAngle;
-        //Debug.Log(torchposition.rotation.Z);
-        float angle = torchposition.rotation.z;
+        int rayCount        = 50;
+        origin              = torchposition.position;
+        float angle         = playerAim.rotationZ + 10;
         float angleIncrease = fov/ rayCount;
+
+
         mesh.RecalculateBounds();
+        
+        Vector3[] vertices  = new Vector3[rayCount + 1 + 1];
+        Vector2[] uv        = new Vector2[vertices.Length];
+        int[] triangles     = new int[rayCount * 3];
 
-        Vector3[] vertices = new Vector3[rayCount + 1 + 1];
-        Vector2[] uv = new Vector2[vertices.Length];
-        int[] triangles = new int[rayCount * 3];
+        vertices[0]         = origin;
 
-        vertices[0] = origin;
+        int vertexIndex     = 1;
+        int triangleIndex   = 0;
 
-        int vertexIndex = 1;
-        int triangleIndex = 0;
         for(int i = 0; i <= rayCount; i++){
             Vector3 vertex;
 
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            //Debug.Log(origin);
+            RaycastHit2D raycastHit2D   = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+
+            RaycastHit2D HitEnemy       = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, enemyLayerMask);
+            //If the ray doesnt hit a wall it will be at maximum length
             if (raycastHit2D.collider == null){
                 //No hit
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance; 
                 //Debug.Log("No Hit");
                 //Debug.Log(vertex);
             } 
+            //if not then limit the length to the point it hit.
             else{
                 //Hit
                 
                 vertex = raycastHit2D.point;
                 //Debug.Log(vertex);
             }
+
+            //Check if we have hit an enemy with the light.
+            if(HitEnemy.collider != null){
+                //Should trigger the enemy trigger script.
+                EnemyScript trigger = HitEnemy.collider.gameObject.GetComponent<EnemyScript>();
+                trigger.EnemyTrigger();
+
+            }
+
 
             vertices[vertexIndex] = vertex;
             if(i>0){
