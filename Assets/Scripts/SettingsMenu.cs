@@ -48,6 +48,6 @@ public class SettingsMenu : MonoBehaviour {
     {
         Screen.fullScreen = isFullscreen;
     }
-
+     
 
 }
