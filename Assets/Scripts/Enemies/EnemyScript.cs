@@ -8,6 +8,10 @@ public class EnemyScript : MonoBehaviour
     public  bool    LightOn         = false;
     public  Player  thePlayer;
 
+    void Start(){
+        thePlayer = GameObject.Find("Player").GetComponent<Player>();
+
+    }
 
     void FixedUpdate(){
         if(enemyTriggered){

@@ -24,13 +24,13 @@ public class PauseMenu : MonoBehaviour
 
      }   
     }
-    void Resume(){
+    public void Resume(){
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
 
     }
-    void Pause(){
+    public void Pause(){
         //Activate the pause menu and freeze the game.
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

@@ -20,11 +20,16 @@ public class Player : MonoBehaviour
 
     public  bool         torchActive = true;
 
+    public AudioSource torchOn;
+    public AudioSource torchOff;
+
     void Start()
-    {
+    {    
+
 
         healthBar.SetHealth(health);
         staminaBar.SetStamina(stamina);
+
     }
 
     void Update()
@@ -45,12 +50,15 @@ public class Player : MonoBehaviour
                 torch.SetActive(false);
                 torchmesh.SetActive(false);
                 torchActive = false;
+                torchOff.Play(0);
                 
             }
             else{
                 torch.SetActive(true);
                 torchmesh.SetActive(true);
                 torchActive = true;
+                
+                torchOn.Play(0);
 
             }
         }

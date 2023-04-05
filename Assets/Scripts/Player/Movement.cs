@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public Transform  groundChecker;
     public LayerMask groundlayer;
     public int speed;
-    
+    public AudioSource footsteps;
     public Animator animator;
     public int jumpForce;
 
@@ -29,9 +29,18 @@ public class Movement : MonoBehaviour
         //Movement Scripts//
         float Horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(Horizontal * speed, body.velocity.y);
+
         //Sets animator up for walking animation.
         animator.SetFloat("Speed", Math.Abs(body.velocity.x));
-
+        
+        //Activating the walking sound effect.
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))){
+            //Debug.Log("PlaySound");
+            footsteps.UnPause();
+        }
+        else{
+            footsteps.Pause();
+        }
 
 
         //Jump if we are on the ground.
