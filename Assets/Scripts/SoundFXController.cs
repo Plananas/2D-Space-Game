@@ -60,6 +60,8 @@ public class SoundFXController : MonoBehaviour
         if (incrementMusicOff > musicOffLength && musicactive == false){
             int prev = r;
             r = UnityEngine.Random.Range(0, 6);
+
+            //Make sure that the same song isnt played twice//
             while(prev == r){
                 r = UnityEngine.Random.Range(0, 6);
             }
