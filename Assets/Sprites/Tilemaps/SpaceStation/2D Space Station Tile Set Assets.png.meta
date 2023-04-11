@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: 59fe01fedaad72548b23573038014b33
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 19
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 691
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aa3f1ea4c605d4ba2eb06c8c8e50d2
+      internalID: 452317115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 785
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c06124d16bfba8429da4fc166d682ac
+      internalID: -705824229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 787
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcab2cc41e0df5c46865e4a8495424ee
+      internalID: 1713881986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 786
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6913c3b8d85db48998484f0a7cb309
+      internalID: 1125989783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 801
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ef3559a5b5b95409ab2530d8eb16d9
+      internalID: -903193298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_5
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 10
+        width: 538
+        height: 811
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec32818b8af56804b98b826049cee904
+      internalID: -582149331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_6
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 767
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6878f53dec088d94c939a4c171177113
+      internalID: -981884933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 778
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238e70865f652d74782794ccc791d65c
+      internalID: 1384128920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_8
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 754
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1b06f9dabd60042a475c13750deb8c
+      internalID: 1838421044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 744
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b739532053d4e7842809f9a6ff7793a8
+      internalID: -468395137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 747
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6468ba7f0fa8bc844a596f6bb0d17b09
+      internalID: 664012753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_11
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 759
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b653a0ce862cd0478f71856d318016e
+      internalID: 1768743376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 728
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93e01602d143e849ab083301b13fa3d
+      internalID: -538363208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_13
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 710
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bcf481ae780dc4fbfdf4a3272f5efe
+      internalID: 1515929389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_14
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 741
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cf574b4688ce249b211e26195e4775
+      internalID: -1216724914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_15
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 726
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07545950e25fce94ca6107a89aeacf44
+      internalID: -551121141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 721
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb207df3dec80a48a2eeeb2293afec4
+      internalID: -215119640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_17
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 702
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5765760ddfc06e14e8e696a7742fac30
+      internalID: 1525583405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 706
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f9116f06b4d8f41a4be9c1f4832889
+      internalID: 1538627152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_19
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 701
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6067569673e11bc42920824d3938a402
+      internalID: -2109248296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 671
+        width: 64
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd00d7470a511a4409516a33caa9d864
+      internalID: 698446571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 657
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b86609bcf629974a9b24dd98a7c37ec
+      internalID: 52643922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_22
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 643
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63b517a4d518fa4c87abdee2aff4a00
+      internalID: 678398844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 623
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282cc6c37a2e3da429bb6373d2417c12
+      internalID: 1598780706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_24
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 622
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201ac943b8611ed4e91b9617d36f9118
+      internalID: 2126982362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_25
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 474
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1854db88eda4a4db930fac07ada099
+      internalID: -1332781997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 474
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0abb6f3bff74b4b8346f1774b7d656
+      internalID: -2009466587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_27
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 328
+        width: 96
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b155d80b22463ed4b941b9d61bfc208b
+      internalID: 720056683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_28
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 329
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181aa26701b291c428ed390aa224c03a
+      internalID: -56772459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_29
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 179
+        width: 29
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de7d53f876d058499fba2d45b47c3e7
+      internalID: 195587440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 183
+        width: 47
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9509a397444c7b34e8e751059ad80cf6
+      internalID: -874879410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_31
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 179
+        width: 84
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9f42753218f7847bfafe20d5cc13b8
+      internalID: 5416908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 124
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8ff80cb2ae64446add8fee4d4b4b55
+      internalID: 1118893382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 124
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be94c5e9343e16a4cb8778df8fb0dbdb
+      internalID: 1192656760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2D Space Station Tile Set Assets_34
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 124
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a427671e526ed0d469446b52bc6e5884
+      internalID: 2002321026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      2D Space Station Tile Set Assets_0: 452317115
+      2D Space Station Tile Set Assets_1: -705824229
+      2D Space Station Tile Set Assets_10: 664012753
+      2D Space Station Tile Set Assets_11: 1768743376
+      2D Space Station Tile Set Assets_12: -538363208
+      2D Space Station Tile Set Assets_13: 1515929389
+      2D Space Station Tile Set Assets_14: -1216724914
+      2D Space Station Tile Set Assets_15: -551121141
+      2D Space Station Tile Set Assets_16: -215119640
+      2D Space Station Tile Set Assets_17: 1525583405
+      2D Space Station Tile Set Assets_18: 1538627152
+      2D Space Station Tile Set Assets_19: -2109248296
+      2D Space Station Tile Set Assets_2: 1713881986
+      2D Space Station Tile Set Assets_20: 698446571
+      2D Space Station Tile Set Assets_21: 52643922
+      2D Space Station Tile Set Assets_22: 678398844
+      2D Space Station Tile Set Assets_23: 1598780706
+      2D Space Station Tile Set Assets_24: 2126982362
+      2D Space Station Tile Set Assets_25: -1332781997
+      2D Space Station Tile Set Assets_26: -2009466587
+      2D Space Station Tile Set Assets_27: 720056683
+      2D Space Station Tile Set Assets_28: -56772459
+      2D Space Station Tile Set Assets_29: 195587440
+      2D Space Station Tile Set Assets_3: 1125989783
+      2D Space Station Tile Set Assets_30: -874879410
+      2D Space Station Tile Set Assets_31: 5416908
+      2D Space Station Tile Set Assets_32: 1118893382
+      2D Space Station Tile Set Assets_33: 1192656760
+      2D Space Station Tile Set Assets_34: 2002321026
+      2D Space Station Tile Set Assets_4: -903193298
+      2D Space Station Tile Set Assets_5: -582149331
+      2D Space Station Tile Set Assets_6: -981884933
+      2D Space Station Tile Set Assets_7: 1384128920
+      2D Space Station Tile Set Assets_8: 1838421044
+      2D Space Station Tile Set Assets_9: -468395137
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

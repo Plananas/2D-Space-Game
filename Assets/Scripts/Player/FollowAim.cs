@@ -18,7 +18,9 @@ public class FollowAim : MonoBehaviour
     private void FixedUpdate()
     {
         FlipSprite();
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        var mousePos1 = Input.mousePosition;
+        mousePos1.z = 10; // select distance = 10 units from the camera
+        Vector3 difference = Camera.main.ScreenToWorldPoint(mousePos1) - transform.position;
  
         difference.Normalize();
  
