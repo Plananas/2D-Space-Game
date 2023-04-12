@@ -9,7 +9,7 @@ public class MouseRetical : MonoBehaviour
     void Reticle()
     {
         var mousePos1 = Input.mousePosition;
-        mousePos1.z = 10; // select distance = 10 units from the camera
+        mousePos1.z = 7; // select distance = 10 units from the camera
 
         Vector3 mousePos = mainCamera.ScreenToWorldPoint(mousePos1);
         
