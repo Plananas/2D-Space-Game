@@ -91,7 +91,6 @@ public class Player : MonoBehaviour
     void UseStamina(int UseStamina)
     {
         stamina -= UseStamina;
-
         staminaBar.SetStamina(stamina);
     }
 
