@@ -6,13 +6,13 @@ using System.Threading;
 public class Player : MonoBehaviour
 {
     public  int          health;
-    public  int          stamina;
+    public  int          battery;
     public  float        sanity;
-    public  float        ammo;
+    public  float        ammo; 
 
 
     public  HealthBar    healthBar;
-    public  StaminaBar   staminaBar;
+    public  BatteryBar   batteryBar;
 
     public  Animator     PlayerAnimator;
     public  GameObject   torch;
@@ -26,16 +26,17 @@ public class Player : MonoBehaviour
     void Start()
     {    
 
-
         healthBar.SetHealth(health);
-        staminaBar.SetStamina(stamina);
+        batteryBar.SetBattery(battery);
 
     }
 
     void Update()
     {
+        //Updates the bars
+        batteryBar.SetBattery(battery);
+        healthBar.SetHealth(health);
         
-
         //This will neeed to change to trigger if an enemy makes contact with us//
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -61,13 +62,14 @@ public class Player : MonoBehaviour
                 torchOn.Play(0);
 
             }
+
         }
 
         //We will do this when running//
         //running not implemented just yet//
         if (Input.GetKeyDown(KeyCode.M))
         {
-            UseStamina(2);
+            UseBattery(2);
         }
 
         //Decreases the sanity when the torch is not on//
@@ -80,18 +82,17 @@ public class Player : MonoBehaviour
     void TakeDamage(int damage)
     {
         health -= damage;
-        healthBar.SetHealth(health);
+        
+    } 
+    void UseBattery(int UseBattery)
+    {
+        battery -= UseBattery;
+        
     }
 
     //This will play the death animation//
     void Death(){
         
-    }
- 
-    void UseStamina(int UseStamina)
-    {
-        stamina -= UseStamina;
-        staminaBar.SetStamina(stamina);
     }
 
      
