@@ -8,7 +8,7 @@ public class BatteryBar : MonoBehaviour
 
     public Slider slider;
 
-    public void SetBattery(int battery)
+    public void SetBattery(float battery)
     {
         slider.value = battery;
     }

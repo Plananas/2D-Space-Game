@@ -6,7 +6,7 @@ using System.Threading;
 public class Player : MonoBehaviour
 {
     public  int          health;
-    public  int          battery;
+    public  float          battery;
     public  float        sanity;
     public  float        ammo; 
 
@@ -46,13 +46,13 @@ public class Player : MonoBehaviour
             Death();
         }
         //When player presses T, toggle torch.
-        if (Input.GetKeyDown(KeyCode.T)){
+        if (Input.GetKeyDown(KeyCode.T) && (battery > 0)){
             if(torchActive){
                 torch.SetActive(false);
                 torchmesh.SetActive(false);
                 torchActive = false;
                 torchOff.Play(0);
-                
+
             }
             else{
                 torch.SetActive(true);
@@ -63,6 +63,16 @@ public class Player : MonoBehaviour
 
             }
 
+        }
+        //Determines the battery and the torch running out of power.
+        if(battery <= 0){
+            torchActive = false;
+            torch.SetActive(false);
+            torchmesh.SetActive(false);
+            torchOff.Play(0);
+        }
+        if(torchActive){
+            battery -= 0.5f * Time.deltaTime;
         }
 
         //We will do this when running//
