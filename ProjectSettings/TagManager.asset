@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Reticle
   - Door
+  - Torch
+  - Enemy
+  - Ladder
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Enemy
+  - Platform
   - 
   - 
   - 
@@ -45,6 +49,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3860584055
+    locked: 0
+  - name: LaddersPlatforms
+    uniqueID: 3968776903
     locked: 0
   - name: Items
     uniqueID: 1136506419

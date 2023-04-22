@@ -8,7 +8,7 @@ public class FollowAim : MonoBehaviour
     public GameObject   myPlayer;
     public SpriteRenderer sprite;
     private bool facingRight = true;
-    
+    public float rotationZ;
 
     void FlipSprite(){
         sprite.flipX = !facingRight;
@@ -18,12 +18,14 @@ public class FollowAim : MonoBehaviour
     private void FixedUpdate()
     {
         FlipSprite();
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        var mousePos1 = Input.mousePosition;
+        mousePos1.z = 10; // select distance = 10 units from the camera
+        Vector3 difference = Camera.main.ScreenToWorldPoint(mousePos1) - transform.position;
  
         difference.Normalize();
  
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        Debug.Log(rotationZ);
+        rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        //Debug.Log(rotationZ);
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         
         //This will flip the player sprite depending on the direction they face.
