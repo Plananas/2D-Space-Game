@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 
+
 public class Player : MonoBehaviour
 {
     public  int          health;
@@ -26,12 +27,15 @@ public class Player : MonoBehaviour
     private bool         dead = false;
     public  Movement     playerMovement;
 
+    
+
 
     void Start()
     {    
 
         healthBar.SetHealth(health);
         batteryBar.SetBattery(battery);
+        
 
     }
 
