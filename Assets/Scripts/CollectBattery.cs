@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CollectBattery : MonoBehaviour
 {
+    public AudioSource batterynoise;
+
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -19,6 +23,8 @@ public class CollectBattery : MonoBehaviour
                         player.battery += 1; // Add 5 health to the player
                     }
                 }
+                batterynoise.Play(0);
+
                 Debug.Log("Player has collected battery pack!");
                 Destroy(gameObject); // Destroy the item
             }

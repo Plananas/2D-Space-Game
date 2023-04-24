@@ -47,10 +47,12 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(health);
             
             //This will neeed to change to trigger if an enemy makes contact with us//
+            /*
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 TakeDamage(2);
             }
+            */
             if(health <= 0){
                 Death();
             }
@@ -82,7 +84,7 @@ public class Player : MonoBehaviour
             }
             //Constantly lower the battery when the torch is on.
             if(torchActive){
-                battery -= 0.5f * Time.deltaTime;
+                battery -= 0.1f * Time.deltaTime;
             }
 
             //Decreases the sanity when the torch is not on//

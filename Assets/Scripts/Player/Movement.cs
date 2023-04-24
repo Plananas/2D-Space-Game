@@ -15,7 +15,6 @@ public class Movement : MonoBehaviour
     public int          jumpForce;
 
 
-    private bool                 isCrouching;
     public  CapsuleCollider2D    StandingCollider1;
     public  CapsuleCollider2D    StandingCollider2;
     public  CapsuleCollider2D    CrouchingCollider;
@@ -89,13 +88,15 @@ public class Movement : MonoBehaviour
             CrouchingCollider.enabled = true;
             StandingCollider1.enabled = false;
             StandingCollider2.enabled = false;
-            isCrouching = true;
+            animator.SetBool("IsCrouching", true);
+
+            ///NEED TO CHANGE LOCATION OF TORCH OBJECT IN THE GAME!///
         }
         else if(roofCheck() == false){
             CrouchingCollider.enabled = false;
             StandingCollider1.enabled = true;
             StandingCollider2.enabled = true;            
-            isCrouching = false;
+            animator.SetBool("IsCrouching", false);
         }
 
     }
