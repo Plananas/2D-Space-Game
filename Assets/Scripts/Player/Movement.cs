@@ -73,17 +73,14 @@ public class Movement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Platform")); // Cast a ray down from the player's position
             if (hit.collider != null && hit.collider.CompareTag("Platform")) // Check if the ray hits a platform collider
             {
-                CapsuleCollider2D[] colliders = GetComponentsInChildren<CapsuleCollider2D>(); // Get all capsule colliders attached to the player
-                foreach (CapsuleCollider2D collider in colliders)
-                {
-                    Physics2D.IgnoreCollision(collider, hit.collider, true); // Ignore collision between player and platform
-                }
-                Invoke("ResetCollision", 0.1f); // Re-enable collision after 0.1 seconds
+                /////need to disable the collider with the player and the platform temporarily here/////
+
+                
             }
         }
 
         //Player Crouching//
-        if(Input.GetKey(KeyCode.S)){
+        if(Input.GetKey(KeyCode.C)){
 
             CrouchingCollider.enabled = true;
             StandingCollider1.enabled = false;
@@ -103,10 +100,8 @@ public class Movement : MonoBehaviour
 
     void ResetCollision()
     {
-        CapsuleCollider2D[] colliders = GetComponentsInChildren<CapsuleCollider2D>(); // Get all capsule colliders attached to the player
-        foreach (CapsuleCollider2D collider in colliders)
-        {
-            Physics2D.IgnoreCollision(collider, null, false); // Re-enable collision between player and platform
-        }
+
+        //Physics2D.IgnoreCollision(collider, null, false); // Re-enable collision between player and platform
+
     }
 }
