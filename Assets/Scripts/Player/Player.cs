@@ -9,19 +9,22 @@ public class Player : MonoBehaviour
     public  int          health;
     public  float        battery;
     public  float        sanity;
-    public  float        ammo; 
+    public  int          ammo; 
 
     public  HealthBar    healthBar;
     public  BatteryBar   batteryBar;
 
     public  Animator     PlayerAnimator;
+    public  Animator     AmmoAnimator;
+
+
     public  GameObject   torch;
     public  GameObject   torchmesh;
 
     public  bool         torchActive = true;
 
-    public AudioSource torchOn;
-    public AudioSource torchOff;
+    public AudioSource   torchOn;
+    public AudioSource   torchOff;
 
 
     private bool         dead = false;
@@ -46,6 +49,9 @@ public class Player : MonoBehaviour
             batteryBar.SetBattery(battery);
             healthBar.SetHealth(health);
             
+            //Update the ammo count in the animator//
+            AmmoAnimator.SetInteger("Ammo", ammo);
+
             //This will neeed to change to trigger if an enemy makes contact with us//
             /*
             if (Input.GetKeyDown(KeyCode.Space))
