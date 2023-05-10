@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     public  CapsuleCollider2D    StandingCollider1;
     public  CapsuleCollider2D    StandingCollider2;
     public  CapsuleCollider2D    CrouchingCollider;
+
+
     
 
     //Check if player is touching the ground before they can jump.
@@ -65,19 +67,6 @@ public class Movement : MonoBehaviour
            
         }
         
-
-        //Player moving down through the platforms//
-        if (Input.GetKeyDown(KeyCode.Space) && Input.GetKey(KeyCode.S)) // Check if the S key is pressed
-        {
-            Debug.Log("Go Through Platform");
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, LayerMask.GetMask("Platform")); // Cast a ray down from the player's position
-            if (hit.collider != null && hit.collider.CompareTag("Platform")) // Check if the ray hits a platform collider
-            {
-                /////need to disable the collider with the player and the platform temporarily here/////
-
-                
-            }
-        }
 
         //Player Crouching//
         if(Input.GetKey(KeyCode.C)){

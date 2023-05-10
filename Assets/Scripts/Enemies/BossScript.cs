@@ -14,7 +14,7 @@ public class BossScript : MonoBehaviour
     void Update()
     {
         
-        int randomnumber    = Random.Range(0, 1500);  // creates a number between 1 and 12
+        int randomnumber    = Random.Range(0, 1000);  // creates a number between 1 and 12
         int randomDoor      = Random.Range(0, 6);
 
         if(randomnumber == 12.0f){
