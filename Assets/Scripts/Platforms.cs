@@ -19,7 +19,7 @@ public class Platforms : MonoBehaviour
         //Player moving down through the platforms//
         if ((Input.GetKeyDown(KeyCode.Space) && Input.GetKey(KeyCode.S)) && _playerOnPlatform) // Check if the S key is pressed
         {
-            Debug.Log("Go Through Platform");
+            
             _collider.enabled = false;
             StartCoroutine(EnableCollider());
             
@@ -39,7 +39,7 @@ public class Platforms : MonoBehaviour
 
         var player = other.gameObject.CompareTag("Player");
         if(player != false){
-            Debug.Log("Player On Platform");
+            
             _playerOnPlatform = value;
         }
     }
