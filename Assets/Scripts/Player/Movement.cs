@@ -88,7 +88,9 @@ public class Movement : MonoBehaviour
 
 
         //Player Falling//
-        if (body.velocity.y > 1)
+        //Does not work as intended this will need some work on!
+        /*
+        if (body.velocity.y < 1)
         {
             Falling = true;
             animator.SetBool("IsFalling", true);
@@ -98,6 +100,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("IsFalling", false);
             Falling = false;
         }
+        */
 
     }
 
