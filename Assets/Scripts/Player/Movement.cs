@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public Animator     animator;
     public int          jumpForce;
 
+    public bool        Falling;
 
     public  CapsuleCollider2D    StandingCollider1;
     public  CapsuleCollider2D    StandingCollider2;
@@ -83,6 +84,19 @@ public class Movement : MonoBehaviour
             StandingCollider1.enabled = true;
             StandingCollider2.enabled = true;            
             animator.SetBool("IsCrouching", false);
+        }
+
+
+        //Player Falling//
+        if (body.velocity.y > 1)
+        {
+            Falling = true;
+            animator.SetBool("IsFalling", true);
+        }
+        else
+        {
+            animator.SetBool("IsFalling", false);
+            Falling = false;
         }
 
     }

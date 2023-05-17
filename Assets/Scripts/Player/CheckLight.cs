@@ -78,12 +78,13 @@ public class CheckLight : MonoBehaviour
             }
 
             //Check if we have hit an enemy with the light.
+            /*
             if(HitEnemy.collider != null){
                 //Should trigger the enemy trigger script.
                 EnemyScript trigger = HitEnemy.collider.gameObject.GetComponent<EnemyScript>();
                 trigger.EnemyTrigger();
 
-            }
+            }*/
 
 
             vertices[vertexIndex] = vertex;
