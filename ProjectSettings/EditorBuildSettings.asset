@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheTestChamber.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/lvl 3.unity
+    guid: 2c900d02d417e904ab79ba21801ecc54
+  - enabled: 1
+    path: Assets/Scenes/BossLevel.unity
+    guid: 1e88abbb4cd68a343b55082c0c28d644
   m_configObjects: {}
