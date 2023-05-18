@@ -4953,8 +4953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -201.24231, y: -21.083282}
-  m_SizeDelta: {x: 16.0131, y: -221.5566}
+  m_AnchoredPosition: {x: -198, y: -7}
+  m_SizeDelta: {x: 151.6174, y: -90.3741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144001724
 MonoBehaviour:
@@ -4976,8 +4976,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Robin - Project Leader\nAdam - Art, animations\nJames - UI, Programming
-    and story\nThea - UI, \nAidan - \nJoaco - "
+  m_text: 'Robin - Lead game design
+
+    Adam - Art, sound and animations
+
+    James
+    - UI, programming and story
+
+    Thea - UI and animations
+
+    Aidan - AI and
+    game programming
+
+    Joaquin - Level Design'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -5011,7 +5022,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5040,7 +5051,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -59.985474, w: 0}
+  m_margin: {x: 0, y: 0, z: -310.55856, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
