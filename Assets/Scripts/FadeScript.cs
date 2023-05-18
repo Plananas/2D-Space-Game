@@ -45,8 +45,8 @@ public class FadeScript : MonoBehaviour
 
     private IEnumerator TestFade()
     {
-        yield return new WaitForSeconds(10f);
-        FadeOut(10f);
+        yield return new WaitForSeconds(9f);
+        FadeOut(9f);
 
     }
 }
